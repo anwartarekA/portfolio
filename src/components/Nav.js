@@ -2,44 +2,88 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 const Navbar = styled.nav`
-width:75%;
+width:50%;
 display:flex;
 justify-content:space-around;
 align-items:center;
 color:white;
-background-color:red;
 cursor:pointer;
 padding:10px;
+margin:auto;
 `
 const Logo = styled.div`
-width:15%;
+width:20%;
 color:white;
-background-color:blue;
 cursor:pointer;
 text-align:center;
-padding:10px;
+padding:17px;
 `
 const divStyling = {
     'display':'flex',
     'align-items':'center',
-    'font-size':'18px'
+    'justify-content':'space-evenly',
+    'font-size':'18px',
 }
-const Home = styled.div``
-const Projects = styled.div``
-const Skills = styled.div``
-const Resume = styled.div``
-const Experiences = styled.div``
-const Contact = styled.div``
+const Home = styled.div`
+padding:7px 12px;
+transition:.3s all;
+&:hover {
+    background-color:rgb(146 220 94);
+    color:blue;
+    border-radius:10px;
+}
+`
+const Projects = styled.div`
+padding:7px 12px;
+transition:.3s all;
+&:hover {
+    background-color:rgb(146 220 94);
+    color:blue;
+    border-radius:10px;
+}`
+const Skills = styled.div`
+padding:7px 12px;
+transition:.3s all;
+&:hover {
+    background-color:rgb(146 220 94);
+    color:blue;
+    border-radius:10px;
+}`
+const Resume = styled.div`
+padding:7px 12px;
+transition:.3s all;
+&:hover {
+    background-color:rgb(146 220 94);
+    color:blue;
+    border-radius:10px;
+}`
+const Experiences = styled.div`
+padding:7px 12px;
+transition:.3s all;
+&:hover {
+    background-color:rgb(146 220 94);
+    color:blue;
+    border-radius:10px;
+}`
+const Contact = styled.div`
+padding:7px 12px;
+transition:.3s all;
+&:hover {
+    background-color:rgb(146 220 94);
+    color:blue;
+    border-radius:10px;
+}`
 const ThemeIcon = styled(FontAwesomeIcon)`
-    width:10%;
+    width:20%;
     color:#ffd43b;
     font-size:25px;
     cursor:pointer;
-    text-align:center
+    text-align:center;
+    padding:17px
 `
 function Nav(){
     return <div style={divStyling}>
-        <Logo>Logo</Logo>
+        <Logo>Anwar Tarek</Logo>
     <Navbar>
         <Home>Home</Home>
         <Projects>Projects</Projects>
