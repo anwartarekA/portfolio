@@ -1,7 +1,6 @@
-import Nav from "./components/Nav"
+import Container from "./components/containter"
 function App (){
-    return <div>
-        <Nav/>
-    </div>
+    return <Container/>
+    
 }
 export default App
