@@ -37,6 +37,9 @@ const NavItem = styled.div`
   }
 `;
 const divStyling = {
+    'width':'100%',
+    'position':'absolute',
+    'top':'0',
     'display':'flex',
     'alignItems':'center',
     'justifyContent':'space-evenly',
