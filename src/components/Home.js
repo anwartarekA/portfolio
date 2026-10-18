@@ -10,29 +10,47 @@ const HomeSection = styled.div`
 const firstHeading = {
     'fontSize':'42px',
     'color':'#ffffff',
-    'text-transform':'capitalize',
-    'font-family':'arial'
+    'textTransform':'capitalize',
+    'fontFamily':'arial'
 }
 const firstHeadingSpan = {
     'fontSize':'42px',
     'color':'transparent',
     'background':'linear-gradient(to right , #10b981, #6ee7b7)',
-    'background-clip':'text',
-    'text-transform':'capitalize',
-    'font-family':'arial'
+    'backgroundClip':'text',
+    'textTransform':'capitalize',
+    'fontFamily':'arial'
 }
 const secondHeading = {
     'fontSize':'30px',
     'color':'#ffffff',
-    'text-transform':'capitalize',
-    'font-family':'arial'
+    'textTransform':'capitalize',
+    'fontFamily':'arial'
 }
 const paragraph = {
     'fontSize':'16px',
-    'font-family':'arial',
+    'fontFamily':'arial',
     'color': '#9bb8a8',
     'lineHeight':'30px'
 }
+const StyledButton = styled.button`
+    width:150px;
+    border:1px solid rgb(232, 245, 238);
+    padding:10px;
+    font-size:20px;
+    margin-left:20px;
+    cursor:pointer;
+    border-radius:15px;
+    background-color:transparent;
+    color:rgb(232 245 238);
+    margin-top:15px;
+
+    &:hover {
+    color: rgb(110, 231, 183);
+    background-color: rgba(16, 185, 129, 0.15);
+    border:none
+    }
+`
 function Home(){
     return <HomeSection>
         <header>
@@ -46,6 +64,6 @@ function Home(){
 }
 
 function Button({content}){
-    return <button>{content}</button>
+    return <StyledButton>{content}</StyledButton>
 }
 export default Home

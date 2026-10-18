@@ -38,9 +38,9 @@ const NavItem = styled.div`
 `;
 const divStyling = {
     'display':'flex',
-    'align-items':'center',
-    'justify-content':'space-evenly',
-    'font-size':'18px',
+    'alignItems':'center',
+    'justifyContent':'space-evenly',
+    'fontSize':'18px',
 }
 
 const ThemeIcon = styled(FontAwesomeIcon)`
