@@ -2,97 +2,69 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 const Navbar = styled.nav`
-width:50%;
-display:flex;
-justify-content:space-around;
-align-items:center;
-color:white;
-cursor:pointer;
-padding:10px;
-margin:auto;
-`
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #e8f5ee;
+  background-color: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  padding: 10px;
+`;
+
 const Logo = styled.div`
-width:20%;
-color:white;
-cursor:pointer;
-text-align:center;
-padding:17px;
-`
+  width: 15%;
+  background:linear-gradient(to right ,#10b981, #6ee7b7);
+  background-clip:text;
+  color:transparent;
+  border-radius: 12px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+`;
+
+const NavItem = styled.div`
+  cursor: pointer;
+  padding: 7px 14px;
+  color: #e8f5ee;
+  border-radius: 999px;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    color: #6ee7b7;
+    background-color: rgba(16, 185, 129, 0.15);
+  }
+`;
 const divStyling = {
     'display':'flex',
     'align-items':'center',
     'justify-content':'space-evenly',
     'font-size':'18px',
 }
-const Home = styled.div`
-padding:7px 12px;
-transition:.3s all;
-&:hover {
-    background-color:rgb(146 220 94);
-    color:blue;
-    border-radius:10px;
-}
-`
-const Projects = styled.div`
-padding:7px 12px;
-transition:.3s all;
-&:hover {
-    background-color:rgb(146 220 94);
-    color:blue;
-    border-radius:10px;
-}`
-const Skills = styled.div`
-padding:7px 12px;
-transition:.3s all;
-&:hover {
-    background-color:rgb(146 220 94);
-    color:blue;
-    border-radius:10px;
-}`
-const Resume = styled.div`
-padding:7px 12px;
-transition:.3s all;
-&:hover {
-    background-color:rgb(146 220 94);
-    color:blue;
-    border-radius:10px;
-}`
-const Experiences = styled.div`
-padding:7px 12px;
-transition:.3s all;
-&:hover {
-    background-color:rgb(146 220 94);
-    color:blue;
-    border-radius:10px;
-}`
-const Contact = styled.div`
-padding:7px 12px;
-transition:.3s all;
-&:hover {
-    background-color:rgb(146 220 94);
-    color:blue;
-    border-radius:10px;
-}`
+
 const ThemeIcon = styled(FontAwesomeIcon)`
-    width:20%;
+    width:10%;
     color:#ffd43b;
     font-size:25px;
     cursor:pointer;
     text-align:center;
-    padding:17px
+    padding:17px;
 `
 function Nav(){
-    return <div style={divStyling}>
+    return <>
+    <div style={divStyling}>
         <Logo>Anwar Tarek</Logo>
     <Navbar>
-        <Home>Home</Home>
-        <Projects>Projects</Projects>
-        <Skills>Skills</Skills>
-        <Resume>CV/Resume</Resume>
-        <Experiences>Experiences</Experiences>
-        <Contact>Contact</Contact>
+        <NavItem>Home</NavItem>
+        <NavItem>Projects</NavItem>
+        <NavItem>Skills</NavItem>
+        <NavItem>CV/Resume</NavItem>
+        <NavItem>Experiences</NavItem>
+        <NavItem>Contact</NavItem>
     </Navbar>
         <ThemeIcon icon={faMoon}/>
     </div>
+    </>
 }
 export default Nav

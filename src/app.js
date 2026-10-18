@@ -1,6 +1,7 @@
-import Container from "./components/containter"
+// import Container from "./components/containter"
+import ParticlesBg from "./components/ParticlesBg"
 function App (){
-    return <Container/>
+    return <ParticlesBg/>
     
 }
 export default App
