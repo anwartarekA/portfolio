@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {faGithub,faLinkedin} from "@fortawesome/free-brands-svg-icons"
 const HomeSection = styled.div`
     width:600px;
     position:absolute;
@@ -51,6 +53,28 @@ const StyledButton = styled.button`
     border:none
     }
 `
+const brandStyle = {
+    'marginTop':'30px',
+}
+const anchourStyle = {
+    'color':'#ffff',
+    'textDecoration':'none',
+    'fontSize':'35px',
+    'marginLeft':'20px'
+}
+const Anchor = styled.a`
+    display: inline-block;
+    color:#ffffff;
+    text-decoration:none;
+    font-size:35px;
+    margin-left:20px;
+    transition:all 0.3s;
+    
+    &:hover {
+    transform: translateY(-5px);
+    color: #34d399;
+  }
+`
 function Home(){
     return <HomeSection>
         <header>
@@ -60,6 +84,14 @@ function Home(){
         <p style={paragraph}>i'm graduated from faculty of engineering mansoura university from computer and control system department , have experience of building restful api and scalable websites with modern technique also iam pathoined for solving problems solving at leetcode, codeforce and codewars</p>
         <Button content={'my cv'}/>
         <Button content={'contact me'}/>
+        <div style={brandStyle}>
+            <Anchor href="https://github.com/anwartarekA">
+            <FontAwesomeIcon icon={faGithub}/>
+            </Anchor>
+            <Anchor href="https://linkedin.com/anwartarekA">
+            <FontAwesomeIcon icon={faLinkedin}/>
+            </Anchor>
+        </div>
     </HomeSection>
 }
 
