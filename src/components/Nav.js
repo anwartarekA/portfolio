@@ -57,6 +57,7 @@ function Nav(){
         <Logo>Anwar Tarek</Logo>
     <Navbar>
         <NavItem>Home</NavItem>
+        <NavItem>About</NavItem>
         <NavItem>Projects</NavItem>
         <NavItem>Skills</NavItem>
         <NavItem>CV/Resume</NavItem>
