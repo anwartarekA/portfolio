@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import Nav from "./Nav";
+import Home from "./Home";
 const Bg = styled.div`
   position: fixed;
   top: 0;
@@ -53,6 +54,7 @@ function ParticlesBg() {
   <Bg id="particles-js" />
   <Nav/>
   <hr style={hrStyle}/>
+  <Home/>
   </>
 }
 

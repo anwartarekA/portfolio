@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-solid-svg-icons";
 const Navbar = styled.nav`
-  width: 70%;
+  width: 55%;
   display: flex;
   justify-content: space-around;
   align-items: center;
