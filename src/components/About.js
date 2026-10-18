@@ -7,15 +7,20 @@ const Image = styled.img`
     height:100px;
     border-radius:50%;
     border:1px solid  #34d399
-
 `
 const aboutStyle = {
     'backgroundColor': '#0b1f16'
 }
+const headingStyle = {
+    'textAlign':'center',
+    'fontSize':'42px',
+    'textTransform': 'capitaliz',
+    'fontFamily': 'arial'
+}
 const Anchor = styled.a``
 function About (){
     return <div style={aboutStyle}>
-        <div>
+        <div style={headingStyle}>
             <FontAwesomeIcon icon={faPerson}/>
             <h1>about me</h1>
         </div>
