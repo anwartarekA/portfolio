@@ -56,12 +56,6 @@ const StyledButton = styled.button`
 const brandStyle = {
     'marginTop':'30px',
 }
-const anchourStyle = {
-    'color':'#ffff',
-    'textDecoration':'none',
-    'fontSize':'35px',
-    'marginLeft':'20px'
-}
 const Anchor = styled.a`
     display: inline-block;
     color:#ffffff;

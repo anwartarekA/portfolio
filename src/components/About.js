@@ -9,15 +9,18 @@ const Image = styled.img`
     border:1px solid  #34d399
 
 `
+const aboutStyle = {
+    'backgroundColor': '#0b1f16'
+}
 const Anchor = styled.a``
 function About (){
-    return <>
+    return <div style={aboutStyle}>
         <div>
             <FontAwesomeIcon icon={faPerson}/>
             <h1>about me</h1>
         </div>
         <div>
-            <Image src="./../../public/imgs/anwar.jpg"/>
+            <Image src="/imgs/anwar.jpg"/>
             <p>I graduated with an excellent grade from the Faculty of Engineering at Mansoura University, in the Computer and Control Systems Engineering department. Through ICPC, I sharpened my problem-solving and analytical skills.Today, I’m a passionate Node.js developer with strong web development skills. I build RESTful APIs and scalable applications using Node.js, NestJS, PostgreSQL, and MongoDB on the backend, and React, TypeScript, and JavaScript on the frontend.</p>
         </div>
         <div>
@@ -68,7 +71,7 @@ function About (){
                 </Anchor>
             </span>
         </div>
-    </>
+    </div>
 }
 
 export default About

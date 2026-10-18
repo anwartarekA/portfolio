@@ -9,11 +9,6 @@ const Bg = styled.div`
   z-index: -1;
   background: radial-gradient(ellipse at bottom, #10301f 0%, #07140f 60%, #030906 100%);
 `;
-const hrStyle = {
-    height: '0.5px', 
-    background:'linear-gradient(to right ,#10b981, #6ee7b7)',
-    border: 'none'
-}
 function ParticlesBg() {
   useEffect(() => {
     window.particlesJS("particles-js", {
