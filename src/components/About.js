@@ -9,20 +9,28 @@ const Image = styled.img`
     border:1px solid  #34d399
 `
 const aboutStyle = {
-    'backgroundColor': '#0b1f16'
+    'backgroundColor': '#0b1f16',
 }
 const headingStyle = {
-    'textAlign':'center',
-    'fontSize':'42px',
+    'display':'flex',
+    'width':'fit-content',
     'textTransform': 'capitaliz',
-    'fontFamily': 'arial'
+    'fontFamily': 'arial',
+    'backgroundColor':'red',
+    'transform':'translate(850px, 30px)',
+    'borderBottom':'solid 7px rgb(136 175 157)',
+    'padding':'0px'
+}
+const h1Style = {
+    'color':'white',
+    'fontSize':'42px',
 }
 const Anchor = styled.a``
 function About (){
     return <div style={aboutStyle}>
         <div style={headingStyle}>
             <FontAwesomeIcon icon={faPerson}/>
-            <h1>about me</h1>
+            <h1 style={h1Style}>about me</h1>
         </div>
         <div>
             <Image src="/imgs/anwar.jpg"/>
