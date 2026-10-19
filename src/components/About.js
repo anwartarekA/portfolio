@@ -1,12 +1,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {faUser,faLocationDot , faMessage,faPhone , faCode, faTrophy, faChartSimple} from "@fortawesome/free-solid-svg-icons"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 const Image = styled.img`
     width:200px;
     height:200px;
     border-radius:50%;
     border:1px solid  #34d399
+    `
+const animatedImage = keyframes`
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+`;
+const ImageContainter = styled.div`
+    animation-name:${animatedImage};
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-timimg-function:ease-in-out;
+    img{
+    transition: transform 0.3s ease;
+    }
+    &:hover img {
+    transform : scale(1.1);
+    cursor:pointer
+    }
 `
 const aboutStyle = {
     'backgroundColor': '#0b1f16',
@@ -38,17 +55,36 @@ const aboutContainer = {
     'display':'flex',
     'alignItems':'center',
     'justifyContent':'space-between',
-    'backgroundColor':'red',
-    'margin':'100px auto'
+    'marginTop':'100px',
+    'marginLeft':'auto',
+    'marginRight':'auto'
 }
 const paragraphContainer = {
     'width':'calc(930px - 350px)',
     'fontSize': '16px',
-    'fontFamily': 'arial',
+    'fontFamily': 'Segoe UI',
     'color': 'rgb(155, 184, 168)',
     'lineHeight': '30px',
 }
+const linksStyle = {
+    'width':'580px',
+    'display':'flex',
+    'gap':'20px',
+    'flexWrap':'wrap',
+    'marginTop':'20px',
+    'marginLeft':'835px'
+}
 const Anchor = styled.a``
+const Span = styled.span`
+color:rgb(110, 231, 183);
+background-color: rgba(16, 185, 129, 0.15);
+padding:10px;
+cursor:pointer;
+transition:0.3s all;
+&:hover{
+background-color: rgba(56, 59, 58, 0.15);
+}
+`
 function About (){
     return <div style={aboutStyle}>
         <div style={headingStyle}>
@@ -56,61 +92,61 @@ function About (){
             <h1 style={h1Style}>about me</h1>
         </div>
         <div style={aboutContainer}>
-        <div>
+        <ImageContainter>
             <Image src="/imgs/anwar.jpg"/>
-        </div>
+        </ImageContainter>
         <div style={paragraphContainer}>
             <p>I graduated with an excellent grade from the Faculty of Engineering at Mansoura University, in the Computer and Control Systems Engineering department. Through ICPC, I sharpened my problem-solving and analytical skills.Today, I’m a passionate Node.js developer with strong web development skills.</p>
             <p>I build RESTful APIs and scalable applications using Node.js, NestJS, PostgreSQL, and MongoDB on the backend, and React, TypeScript, and JavaScript on the frontend.</p>
         </div>
         </div>
-        <div>
-            <span>
+        <div style={linksStyle}>
+            <Span>
                 <FontAwesomeIcon icon={faLocationDot}/>
                 <span>mansoura,egypt</span>
-            </span>
-            <span>
+            </Span>
+            <Span>
                 <Anchor>
                 <FontAwesomeIcon icon={faMessage}/>
                 <span>anwartarek719@gmail.com</span>
                 </Anchor>
-            </span>
-            <span>
+            </Span>
+            <Span>
                 <Anchor>
                     <FontAwesomeIcon icon={faPhone}/>
                     <span>01212275860</span>
                 </Anchor>
-            </span>
-            <span>
+            </Span>
+            <Span>
                 <Anchor>
                     <FontAwesomeIcon icon={faLinkedin}/>
                     <span>linkedin</span>
                 </Anchor>
-            </span>
-            <span>
+            </Span>
+            <Span>
                 <Anchor>
                     <FontAwesomeIcon icon={faGithub}/>
                     <span>github</span>
                 </Anchor>
-            </span>
-            <span>
+            </Span>
+            <Span>
                 <Anchor>
                     <FontAwesomeIcon icon={faCode}/>
                     <span>leetcode</span>
                 </Anchor>
-            </span>
-            <span>
+            </Span>
+            <Span>
                 <Anchor>
                     <FontAwesomeIcon icon={faTrophy}/>
                     <span>codeforce</span>
                 </Anchor>
-            </span>
-            <span>
+            </Span>
+            <Span>
                 <Anchor>
                     <FontAwesomeIcon icon={faChartSimple}/>
                     <span>codewars</span>
                 </Anchor>
-            </span>
+            </Span>
         </div>
     </div>
 }
