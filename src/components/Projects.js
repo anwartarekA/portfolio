@@ -70,3 +70,19 @@ const projects = [
         link:"https://github.com/anwartarekA/galleryTeam"
     }
 ]
+function Projects ()
+{
+    return <ul>
+        {projects.map(project=> <Project project={project} key={project.title}/>)}
+    </ul>
+}
+function Project ({project}){
+    return <li>
+        <span>{project.title}</span>
+        <span>{project.description}</span>
+        <a href={project.link}>
+            <span>{project.link}</span>
+        </a>
+    </li>
+}
+export default Projects;
