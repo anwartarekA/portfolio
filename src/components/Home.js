@@ -76,7 +76,7 @@ function Home(){
             <h2 style={secondHeading}>software engineer , (mern | pern) stack</h2>
         </header>
         <p style={paragraph}>i'm graduated from faculty of engineering mansoura university from computer and control system department , have experience of building restful api and scalable websites with modern technique also iam pathoined for solving problems solving at leetcode, codeforce and codewars</p>
-        <Button content={'my cv'}/>
+        <Button content={'my cv'} href={'https://drive.google.com/file/d/1EDTp8zXSlPefGpzmXlEAJDeVKi7Kp721/view?usp=drive_link'}/>
         <Button content={'contact me'}/>
         <div style={brandStyle}>
             <Anchor href="https://github.com/anwartarekA">
@@ -89,7 +89,7 @@ function Home(){
     </HomeSection>
 }
 
-function Button({content}){
-    return <StyledButton>{content}</StyledButton>
+function Button({content , href}){
+    return <a href={href ? href : '#'}><StyledButton>{content}</StyledButton> </a>
 }
 export default Home

@@ -50,6 +50,27 @@ const StyleIcon = styled(FontAwesomeIcon)`
     margin-top:25px;
     margin-left:-9px
 `
+const Icon1 = styled(FontAwesomeIcon)`
+    color:#34d399;
+`
+const Icon2 = styled(FontAwesomeIcon)`
+    color:#34d399;
+`
+const Icon3 = styled(FontAwesomeIcon)`
+    color:#34d399;
+`
+const Icon4 = styled(FontAwesomeIcon)`
+    color:#34d399;
+`
+const Icon5 = styled(FontAwesomeIcon)`
+    color:#34d399;
+`
+const Icon6 = styled(FontAwesomeIcon)`
+    color:#34d399;
+`
+const Icon7 = styled(FontAwesomeIcon)`
+    color:#34d399;
+`
 const aboutContainer = {
     'width':'930px',
     'display':'flex',
@@ -74,7 +95,13 @@ const linksStyle = {
     'marginTop':'20px',
     'marginLeft':'835px'
 }
-const Anchor = styled.a``
+const Anchor = styled.a`
+    color:'rgb(155, 184, 168)';
+    text-decoration:none
+`
+const spanStyle = {
+    'color':'rgb(155, 184, 168)'
+}
 const Span = styled.span`
 color:rgb(110, 231, 183);
 background-color: rgba(16, 185, 129, 0.15);
@@ -103,48 +130,48 @@ function About (){
         <div style={linksStyle}>
             <Span>
                 <FontAwesomeIcon icon={faLocationDot}/>
-                <span>mansoura,egypt</span>
+                <span style={spanStyle}>mansoura,egypt</span>
             </Span>
             <Span>
-                <Anchor>
-                <FontAwesomeIcon icon={faMessage}/>
-                <span>anwartarek719@gmail.com</span>
+                <Anchor href="mailto:anwartarek719@gmail.com">
+                <Icon1 icon={faMessage}/>
+                <span style={spanStyle}>anwartarek719@gmail.com</span>
                 </Anchor>
             </Span>
             <Span>
-                <Anchor>
-                    <FontAwesomeIcon icon={faPhone}/>
-                    <span>01212275860</span>
+                <Anchor href="tel:01212275860">
+                    <Icon2 icon={faPhone}/>
+                    <span style={spanStyle}>01212275860</span>
                 </Anchor>
             </Span>
             <Span>
-                <Anchor>
-                    <FontAwesomeIcon icon={faLinkedin}/>
-                    <span>linkedin</span>
+                <Anchor href="https://linkedin.com/anwar-tarek-699b4824a">
+                    <Icon3 icon={faLinkedin}/>
+                    <span style={spanStyle}>linkedin</span>
                 </Anchor>
             </Span>
             <Span>
-                <Anchor>
-                    <FontAwesomeIcon icon={faGithub}/>
-                    <span>github</span>
+                <Anchor href="https://github.com/anwartarekA">
+                    <Icon4 icon={faGithub}/>
+                    <span style={spanStyle}>github</span>
                 </Anchor>
             </Span>
             <Span>
-                <Anchor>
-                    <FontAwesomeIcon icon={faCode}/>
-                    <span>leetcode</span>
+                <Anchor href="https://leetcode.com/u/AnwarTarek/">
+                    <Icon5 icon={faCode}/>
+                    <span style={spanStyle}>leetcode</span>
                 </Anchor>
             </Span>
             <Span>
-                <Anchor>
-                    <FontAwesomeIcon icon={faTrophy}/>
-                    <span>codeforce</span>
+                <Anchor href="https://codeforces.com/profile/Anwar_Tarek">
+                    <Icon6 icon={faTrophy}/>
+                    <span style={spanStyle}>codeforce</span>
                 </Anchor>
             </Span>
             <Span>
-                <Anchor>
-                    <FontAwesomeIcon icon={faChartSimple}/>
-                    <span>codewars</span>
+                <Anchor href="https://www.codewars.com/users/Anwar%20Tarek">
+                    <Icon7 icon={faChartSimple}/>
+                    <span style={spanStyle}>codewars</span>
                 </Anchor>
             </Span>
         </div>
