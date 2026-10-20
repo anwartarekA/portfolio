@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled , { keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode ,faChevronLeft , faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const projects = [
@@ -96,24 +96,93 @@ const StyleIcon = styled(FontAwesomeIcon)`
     margin-left:-9px
 `
 const ProjectsSection = styled.section`
+    padding:20px 0;
     background:
     radial-gradient(ellipse at 50% 0%, rgba(16, 185, 129, 0.18), transparent 55%),
     linear-gradient(180deg, #0b2a1f 0%, #06140f 100%);
 `
-const ArrowBtn = styled(FontAwesomeIcon)`
+const ArrowRightBtn = styled(FontAwesomeIcon)`
+    position:absolute;
+    right:15px;
     width:35px;
     height:35px;
     color:rgb(155, 184, 168);
     cursor:pointer
 `
+const ArrowLeftBtn = styled(FontAwesomeIcon)`
+    position:absolute;
+    left:15x;
+    width:35px;
+    height:35px;
+    color:rgb(155, 184, 168);
+    cursor:pointer
+`
+const animatedLi = keyframes`
+0% , 100% {transform:translateX(0)}
+50% {transform:translateX(-10px)}
+`
 const Li = styled.li`
     width:500px;
+    border-radius:15px;
     list-style-type:none;
-    background-color:rgb(155, 184, 168);
-    padding : 30px 10px;
-    border:2px solid rgb(52, 211, 153);
-    margin:60px auto 0px
+    padding : 30px 15px;
+    background: rgba(10, 40, 30, 0.6);
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    margin:60px auto 0px;
+    box-shadow:rgb(155, 184, 168) 0px 0px 10px;
+    animation-name:${animatedLi};
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+    transition:0.3s all;
+    &:hover{
+        scale:1.1 1;
+        cursor:pointer
+    }
 `
+const titleStyle = {
+    'fontSize':'25px',
+    'color':'rgb(155, 184, 168)',
+    'textAlign':'center',
+    'display':'block',
+    'fontFamily':'Segoe UI',
+    'textTransform':'uppercase'
+}
+const descriptionStyle = {
+    'fontSize':'16px',
+    'lineHeight':'1.9',
+    'color':'rgb(155, 184, 168)',
+    'display':'block',
+    'fontFamily':'Segoe UI',
+    'marginTop':'30px',
+    'opacity':'0.5'
+}
+const Anchor =styled.a`
+    display:block;
+    text-decoration:none;
+    font-size:25px;
+    color:#ffffff;
+    text-align:center;
+    margin-top:20px;
+`
+const Span = styled.span`
+    border:1px solid rgb(232, 245, 238);
+    border-radius:10px;
+    padding:5px 20px;
+    transition:0.3s all;
+&:hover {
+        color: rgb(110, 231, 183);
+        background-color: rgba(16, 185, 129, 0.15);
+    }
+`
+const iconsStyles = {
+    'position':'absolute',
+    'top':'calc(50% - 15px)',
+    'left':'calc(50% - 305px)',
+    'width':'650px',
+    'backgroundColor':'green',
+}
+
 function Projects ()
 {
     return <ProjectsSection>
@@ -121,24 +190,24 @@ function Projects ()
             <StyleIcon icon={faCode}/>
             <h1 style={h1Style}>projects</h1>
         </div>
-        <div>
+        <div style={{position:'relative'}}>
             <ul>
                 {projects.map(project=> <Project project={project} key={project.title}/>)}
             </ul>
-            <div>
-                <ArrowBtn icon={faChevronLeft}/>
-                <ArrowBtn icon={faChevronRight}/>
+            <div style={iconsStyles}>
+                <ArrowLeftBtn icon={faChevronLeft} />
+                <ArrowRightBtn icon={faChevronRight} />
             </div>
         </div>
     </ProjectsSection>
 }
 function Project ({project}){
     return <Li>
-        <span>{project.title}</span>
-        <span>{project.description}</span>
-        <a href={project.link}>
-            <span>{project.link}</span>
-        </a>
+        <span style={titleStyle}>{project.title}</span>
+        <span style={descriptionStyle}>{project.description}</span>
+        <Anchor href={project.link}>
+            <Span>visit</Span>
+        </Anchor>
     </Li>
 }
 export default Projects;
