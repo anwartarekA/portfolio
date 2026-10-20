@@ -38,7 +38,7 @@ const NavItem = styled.div`
 `;
 const divStyling = {
     'width':'100%',
-    'position':'absolute',
+    'position':'fixed',
     'top':'0',
     'display':'flex',
     'alignItems':'center',
@@ -56,7 +56,7 @@ const ThemeIcon = styled(FontAwesomeIcon)`
 `
 function Nav(){
     return <>
-    <div style={divStyling}>
+    <div style={divStyling }>
         <Logo>Anwar Tarek</Logo>
     <Navbar>
         <NavItem>Home</NavItem>
