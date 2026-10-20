@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode } from "@fortawesome/free-solid-svg-icons";
+import { faCode ,faChevronLeft , faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const projects = [
     {
         title:'ERP-system',
@@ -100,6 +100,20 @@ const ProjectsSection = styled.section`
     radial-gradient(ellipse at 50% 0%, rgba(16, 185, 129, 0.18), transparent 55%),
     linear-gradient(180deg, #0b2a1f 0%, #06140f 100%);
 `
+const ArrowBtn = styled(FontAwesomeIcon)`
+    width:35px;
+    height:35px;
+    color:rgb(155, 184, 168);
+    cursor:pointer
+`
+const Li = styled.li`
+    width:500px;
+    list-style-type:none;
+    background-color:rgb(155, 184, 168);
+    padding : 30px 10px;
+    border:2px solid rgb(52, 211, 153);
+    margin:60px auto 0px
+`
 function Projects ()
 {
     return <ProjectsSection>
@@ -107,19 +121,24 @@ function Projects ()
             <StyleIcon icon={faCode}/>
             <h1 style={h1Style}>projects</h1>
         </div>
-        <ul>
-            {projects.map(project=> <Project project={project} key={project.title}/>)}
-        </ul>
+        <div>
+            <ul>
+                {projects.map(project=> <Project project={project} key={project.title}/>)}
+            </ul>
+            <div>
+                <ArrowBtn icon={faChevronLeft}/>
+                <ArrowBtn icon={faChevronRight}/>
+            </div>
+        </div>
     </ProjectsSection>
-    
 }
 function Project ({project}){
-    return <li>
+    return <Li>
         <span>{project.title}</span>
         <span>{project.description}</span>
         <a href={project.link}>
             <span>{project.link}</span>
         </a>
-    </li>
+    </Li>
 }
 export default Projects;
