@@ -101,13 +101,30 @@ const ProjectsSection = styled.section`
     radial-gradient(ellipse at 50% 0%, rgba(16, 185, 129, 0.18), transparent 55%),
     linear-gradient(180deg, #0b2a1f 0%, #06140f 100%);
 `
+const animateRight = keyframes`
+    0% , 100% {transform:translateY(0)}
+    50% {transform:translateY(-5px)}
+`
 const ArrowRightBtn = styled(FontAwesomeIcon)`
     position:absolute;
     right:15px;
     width:35px;
     height:35px;
     color:rgb(155, 184, 168);
-    cursor:pointer
+    cursor:pointer;
+    animation-name:${animateRight};
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+    transition:0.3s all;
+    &:hover{
+        scale:1.3;
+        cursor:pointer
+    }
+`
+const animateLeft = keyframes`
+    0% , 100% {transform:translateY(0)}
+    50% {transform:translateY(-5px)}
 `
 const ArrowLeftBtn = styled(FontAwesomeIcon)`
     position:absolute;
@@ -115,7 +132,16 @@ const ArrowLeftBtn = styled(FontAwesomeIcon)`
     width:35px;
     height:35px;
     color:rgb(155, 184, 168);
-    cursor:pointer
+    cursor:pointer;
+    animation-name:${animateLeft};
+    animation-duration:3s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+    transition:0.3s all;
+    &:hover{
+        scale:1.3;
+        cursor:pointer
+    }
 `
 const animatedLi = keyframes`
 0% , 100% {transform:translateX(0)}
