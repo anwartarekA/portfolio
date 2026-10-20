@@ -27,6 +27,7 @@ const ImageContainter = styled.div`
 `
 const aboutStyle = {
     'backgroundColor': '#0b1f16',
+    'padding':'40px 0'
 }
 const headingStyle = {
     'display':'flex',
