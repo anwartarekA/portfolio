@@ -181,7 +181,8 @@ const descriptionStyle = {
     'display':'block',
     'fontFamily':'Segoe UI',
     'marginTop':'30px',
-    'opacity':'0.5'
+    'opacity':'0.5',
+    'textAlign':'center'
 }
 const Anchor =styled.a`
     display:block;
