@@ -79,6 +79,53 @@ const Skillcontainer = styled.div`
     gap:40px;
     box-sizing:border-box;
 `
+const borderTopBottomBoxAnimation = keyframes`
+   0%, 100% {
+    border-top-color: rgba(16, 185, 129, 0.25);
+    border-bottom-color: rgba(16, 185, 129, 0.25);
+    box-shadow: 0 -4px 12px rgba(16, 185, 129, 0), 0 4px 12px rgba(16, 185, 129, 0);
+  }
+  50% {
+    border-top-color: rgba(52, 211, 153, 0.9);
+    border-bottom-color: rgba(52, 211, 153, 0.9);
+    box-shadow: 0 -4px 14px rgba(16, 185, 129, 0.35), 0 4px 14px rgba(16, 185, 129, 0.35);
+  }
+    `
+const borderRightLeftBoxAnimation = keyframes`
+    0%, 100% {
+    border-color: rgba(16, 185, 129, 0.25);
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0);
+  }
+  50% {
+    border-color: rgba(52, 211, 153, 0.9);
+    box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+  }
+    `
+const borderTopBottomAnimation = keyframes`
+        0%, 100% {
+        border-top-color: rgba(16, 185, 129, 0.25);
+        border-bottom-color: rgba(16, 185, 129, 0.25);
+        box-shadow: 0 -4px 12px rgba(16, 185, 129, 0), 0 4px 12px rgba(16, 185, 129, 0);
+        }
+
+        50% {
+        border-top-color: rgba(52, 211, 153, 0.9);
+        border-bottom-color: rgba(52, 211, 153, 0.9);  
+        color:#ffffff;
+        } 
+    `
+const borderRightLeftAnimation = keyframes`
+        0%, 100% {
+        border-color: rgba(16, 185, 129, 0.25);
+        box-shadow: 0 0 0 rgba(16, 185, 129, 0);  
+        }
+
+        50% {
+        border-color: rgba(52, 211, 153, 0.9);
+        box-shadow: 0 0 16px rgba(16, 185, 129, 0.35);
+        color:#ffffff;
+    }
+    `
 const Box = styled.div`
     flex: 1;
     min-width: 0px;
@@ -89,6 +136,8 @@ const Box = styled.div`
     padding: 20px;
     border: 2px solid rgba(16, 185, 129, 0.25);
     box-shadow: 0px 0px 10px rgba(155, 184, 168, 0.5);
+    animation: ${borderTopBottomBoxAnimation} 2s infinite ease-in-out;
+    animation: ${borderRightLeftBoxAnimation} 2s infinite ease-in-out;
     transition: all 0.3s ease-in-out;
     &:hover {
     scale: 1 1.1;
@@ -131,10 +180,11 @@ const Spanstyling = styled.span`
     border-radius:5px;
     text-transform:capitalize;
     font-family:Segoe UI;
-`
-const BackendSpanStyle = styled(Spanstyling)``
-const FrontendSpanStyle = styled(Spanstyling)``
-const Paragraph = styled.p`
+    `
+    const BackendSpanStyle = styled(Spanstyling)``
+    const FrontendSpanStyle = styled(Spanstyling)``
+
+    const Paragraph = styled.p`
     text-align:center;
     font-size:1.5rem;
     color:rgba(155, 184, 168, 0.5);
@@ -146,6 +196,8 @@ const Paragraph = styled.p`
     transition: all 0.3s ease-in-out;
     border: 2px solid rgba(16, 185, 129, 0.25);
     box-shadow: 0px 0px 10px rgba(155, 184, 168, 0.5);
+    animation: ${borderTopBottomAnimation} 2s infinite ease-in-out;
+    animation: ${borderRightLeftAnimation} 2s infinite ease-in-out;
     &:hover {
     scale:1 1.1;
     cursor: pointer;
