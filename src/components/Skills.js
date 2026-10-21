@@ -69,17 +69,31 @@ const StyleIcon = styled(FontAwesomeIcon)`
     margin-left:-9px
 `
 const Skillcontainer = styled.div`
-    width:calc(55% + 30px);
+    width:calc(55% + 55.2px);
     margin:3rem calc(50% - 27.5%);
     display:flex;
     justify-content:space-around;
     align-items:center;
     border:solid 3px #ffffff;
     padding: 20px;
-
+    gap:20px;
+    box-sizing:border-box;
 `
-const Frontend = styled.div``;
-const Backend = styled.div``;
+const Box = styled.div`
+    flex: 1;
+    min-width: 0px;
+    box-sizing:border-box;
+    background-color:rgba(255, 255, 255, 0.06);
+    border:2px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+`
+const Frontend = styled(Box)`
+
+`;
+const Backend = styled(Box)`
+
+`;
 function Skills(){
     return <SkillSection>
                 <div style={headingStyle}>  
