@@ -76,7 +76,7 @@ const projects = [
 const headingStyle = {
     'display':'flex',
     'justifyContent':'space-between',
-    'width':'230px',
+    'width':'200px',
     'height':'70px',
     'textTransform': 'capitaliz',
     'fontFamily': 'arial',
