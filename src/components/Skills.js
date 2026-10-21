@@ -74,7 +74,6 @@ const Skillcontainer = styled.div`
     display:flex;
     justify-content:space-around;
     align-items:center;
-    border:solid 3px #ffffff;
     padding: 20px;
     gap:40px;
     box-sizing:border-box;
@@ -87,22 +86,52 @@ const Box = styled.div`
     border:2px solid #ffffff;
     border-radius: 10px;
     padding: 20px;
+    border: 2px solid rgba(16, 185, 129, 0.25);
+    box-shadow: 0px 0px 10px rgba(155, 184, 168, 0.5);
 `
 const Frontend = styled(Box)`
-position:relative;
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    gap:10px;
+    flex-wrap:wrap;
     ::after{
-    content:'';
-    position:absolute;
-    width:2px;
-    height:100%;
-    background-color:#ffffff;
-    left:-22px;
-    top:0%
+        content:'';
+        position:absolute;
+        width:2px;
+        height:100%;
+        background-color:rgba(155, 184, 168, 0.5);
+        left:-22px;
+        top:0
     }
 `;
 const Backend = styled(Box)`
-
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
 `;
+const Spanstyling = styled.span`
+    background-color:rgba(16, 185, 129, 0.15);
+    color:#6ee7b7;
+    padding:5px 10px;
+    border-radius:5px;
+    text-transform:capitalize;
+    font-family:Segoe UI;
+`
+const BackendSpanStyle = styled(Spanstyling)``
+const FrontendSpanStyle = styled(Spanstyling)``
+const Paragraph = styled.p`
+    text-align:center;
+    font-size:1.5rem;
+    color:rgba(155, 184, 168, 0.5);
+    background-color:rgba(16, 185, 129, 0.15);
+    padding:5px 10px;
+    border-radius:5px;
+    text-transform:capitalize;
+    font-family:Segoe UI;
+`
+const FrontendParagraph = styled(Paragraph)``
+const BackendParagraph = styled(Paragraph)``
 function Skills(){
     return <SkillSection>
                 <div style={headingStyle}>  
@@ -110,19 +139,25 @@ function Skills(){
                     <h1 style={h1Style}>skills</h1>
                 </div>
                 <Skillcontainer>
-                    <Backend>
-                                {backendSkills.map(skill=><BackendSkills skill={skill} key={skill}/>)}
-                    </Backend>
-                    <Frontend>
-                                {frontendSkills.map(skill=><FrontendSkills skill={skill} key={skill}/>)}
-                    </Frontend>
+                    <div>
+                            <BackendParagraph>backend</BackendParagraph>
+                            <Backend>
+                                        {backendSkills.map(skill=><BackendSkills skill={skill} key={skill}/>)}
+                            </Backend>
+                    </div>
+                    <div>
+                            <FrontendParagraph>frontend</FrontendParagraph>
+                            <Frontend>
+                                        {frontendSkills.map(skill=><FrontendSkills skill={skill} key={skill}/>)}
+                            </Frontend>
+                    </div>
                 </Skillcontainer>
     </SkillSection>
 }
 function FrontendSkills({skill}){
-    return <span>{skill}</span>
+    return <FrontendSpanStyle>{skill}</FrontendSpanStyle>
 }
 function BackendSkills({skill}){
-    return <span>{skill}</span>
+    return <BackendSpanStyle>{skill}</BackendSpanStyle>
 }
 export default Skills;
