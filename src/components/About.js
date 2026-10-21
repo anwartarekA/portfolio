@@ -6,14 +6,16 @@ const Image = styled.img`
     width:200px;
     height:200px;
     border-radius:50%;
-    border:1px solid  #34d399
+    border:1px solid  #34d399;
     `
 const animatedImage = keyframes`
   0%, 100% { transform: translateY(0); }
   50%      { transform: translateY(-12px); }
 `;
 const ImageContainter = styled.div`
+    position:relative;
     animation-name:${animatedImage};
+    z-index:8;
     animation-duration:3s;
     animation-iteration-count:infinite;
     animation-timimg-function:ease-in-out;

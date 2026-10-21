@@ -46,6 +46,7 @@ const divStyling = {
     'alignItems':'center',
     'justifyContent':'space-evenly',
     'fontSize':'18px',
+    'zIndex':'100'
 }
 
 const ThemeIcon = styled(FontAwesomeIcon)`
