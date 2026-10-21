@@ -1,6 +1,6 @@
 import styled , { keyframes } from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode ,faChevronLeft , faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faDiagramProject ,faChevronLeft , faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const projects = [
     {
         title:'ERP-system',
@@ -214,7 +214,7 @@ function Projects ()
 {
     return <ProjectsSection>
         <div style={headingStyle}>  
-            <StyleIcon icon={faCode}/>
+            <StyleIcon icon={faDiagramProject}/>
             <h1 style={h1Style}>projects</h1>
         </div>
         <div style={{position:'relative'}}>
