@@ -1,7 +1,41 @@
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
-
+const frontendSkills = [
+    'html5',
+    'css3',
+    'tailwind css',
+    'sass',
+    'bootstrap',
+    'jquery',
+    'react',
+    'vite',
+    'create-react-app',
+    'React Context | Redux',
+    'next',
+    'javascript',
+    'typescript',
+    'Version Control: Git, GitHub',
+    'UI/UX: Figma'
+];
+const backendSkills = [
+    'nodejs',
+    'nest',
+    'express',
+    'mongoose',
+    'mongodb',
+    'postgresql',
+    'mysql',
+    'typeorm',
+    'prisma',
+    'sqlite3',
+    'docker',
+    'socket.io',
+    'validation(zod , yup, joi , express-validator)',
+    'jwt',
+    'Platforms: VPS(hostinger), AWS, Heroku, Vercel | React Context, Redux',
+    'VPS(hostinger), AWS, Heroku, Vercel'
+]
 const SkillSection = styled.section`
   padding: 5rem 2rem;
   background-color: #05150f;
@@ -34,12 +68,58 @@ const StyleIcon = styled(FontAwesomeIcon)`
     margin-top:25px;
     margin-left:-9px
 `
+const Skillcontainer = styled.div`
+
+`
+const Frontend = styled.div``;
+const Backend = styled.div``;
 function Skills(){
     return <SkillSection>
                 <div style={headingStyle}>  
                     <StyleIcon icon={faCode}/>
                     <h1 style={h1Style}>skills</h1>
                 </div>
+                <Skillcontainer>
+                    <Frontend>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                    </Frontend>
+                    <Backend>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span> </span>
+                    </Backend>
+                </Skillcontainer>
     </SkillSection>
+}
+function FrontendSkills(skill){
+    return <span>{skill}</span>
 }
 export default Skills;
