@@ -69,6 +69,13 @@ const StyleIcon = styled(FontAwesomeIcon)`
     margin-left:-9px
 `
 const Skillcontainer = styled.div`
+    width:calc(55% + 30px);
+    margin:3rem calc(50% - 27.5%);
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border:solid 3px #ffffff;
+    padding: 20px;
 
 `
 const Frontend = styled.div``;
