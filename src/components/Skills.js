@@ -81,45 +81,18 @@ function Skills(){
                 </div>
                 <Skillcontainer>
                     <Frontend>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
+                                {frontendSkills.map(skill=><FrontendSkills skill={skill} key={skill}/>)}
                     </Frontend>
                     <Backend>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                                <span> </span>
+                                {backendSkills.map(skill=><BackendSkills skill={skill} key={skill}/>)}
                     </Backend>
                 </Skillcontainer>
     </SkillSection>
 }
-function FrontendSkills(skill){
+function FrontendSkills({skill}){
+    return <span>{skill}</span>
+}
+function BackendSkills({skill}){
     return <span>{skill}</span>
 }
 export default Skills;
