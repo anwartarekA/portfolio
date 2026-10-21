@@ -1,6 +1,7 @@
-import styled from "styled-components"
+import styled  , {keyframes} from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
+
 const frontendSkills = [
     'html5',
     'css3',
@@ -89,6 +90,13 @@ const Box = styled.div`
     border: 2px solid rgba(16, 185, 129, 0.25);
     box-shadow: 0px 0px 10px rgba(155, 184, 168, 0.5);
 `
+const animationLine = keyframes`
+    0% {transform:translateX(0px);}
+    25% {transform:translateX(5px);}
+    50% {transform:translateX(0px);}
+    75% {transform:translateX(-5px);}
+    100% {transform:translateX(0px);}
+`
 const Frontend = styled(Box)`
     position:relative;
     display:flex;
@@ -98,11 +106,12 @@ const Frontend = styled(Box)`
     ::after{
         content:'';
         position:absolute;
-        width:2px;
+        width:1px;
         height:100%;
-        background-color:rgba(155, 184, 168, 0.5);
+        background-color:rgb(80 114 99);
         left:-22px;
-        top:0
+        top:0;
+        animation : ${animationLine} 3s infinite ease-in-out;
     }
 `;
 const Backend = styled(Box)`
@@ -131,7 +140,7 @@ const Paragraph = styled.p`
     font-family:Segoe UI;
 `
 const FrontendParagraph = styled(Paragraph)``
-const BackendParagraph = styled(Paragraph)``
+const BackendParagraph = styled(Paragraph)``;
 function Skills(){
     return <SkillSection>
                 <div style={headingStyle}>  
