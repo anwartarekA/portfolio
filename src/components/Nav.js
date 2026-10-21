@@ -22,6 +22,7 @@ const Logo = styled.div`
   text-align: center;
   padding: 10px;
   font-weight: bold;
+  font-family:Segoe UI
 `;
 
 const NavItem = styled.div`
@@ -30,6 +31,7 @@ const NavItem = styled.div`
   color: #e8f5ee;
   border-radius: 999px;
   transition: color 0.3s, background-color 0.3s;
+  font-family:Segoe UI;
 
   &:hover {
     color: #6ee7b7;

@@ -102,8 +102,8 @@ const ProjectsSection = styled.section`
     linear-gradient(180deg, #0b2a1f 0%, #06140f 100%);
 `
 const animateRight = keyframes`
-    0% , 100% {transform:translateY(0)}
-    50% {transform:translateY(-5px)}
+    0% , 100% {transform:translateX(0)}
+    50% {transform:translateX(-5px)}
 `
 const ArrowRightBtn = styled(FontAwesomeIcon)`
     position:absolute;
@@ -123,8 +123,8 @@ const ArrowRightBtn = styled(FontAwesomeIcon)`
     }
 `
 const animateLeft = keyframes`
-    0% , 100% {transform:translateY(0)}
-    50% {transform:translateY(-5px)}
+    0% , 100% {transform:translateX(0)}
+    50% {transform:translateX(-5px)}
 `
 const ArrowLeftBtn = styled(FontAwesomeIcon)`
     position:absolute;
@@ -232,7 +232,7 @@ function Project ({project}){
     return <Li>
         <span style={titleStyle}>{project.title}</span>
         <span style={descriptionStyle}>{project.description}</span>
-        <Anchor href={project.link}>
+        <Anchor href={project.link} target="_blank">
             <Span>visit</Span>
         </Anchor>
     </Li>

@@ -16,7 +16,7 @@ const ScrollComponent = styled(FontAwesomeIcon)`
     cursor:pointer;
     transition:0.3s all;
     animation-name:${animatedScroll};
-    animation-duration:3s;
+    animation-duration:1s;
     animation-iteration-count:infinite;
     animation-timing-function:ease-in-out;
     &:hover{
