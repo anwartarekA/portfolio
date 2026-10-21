@@ -89,6 +89,11 @@ const Box = styled.div`
     padding: 20px;
     border: 2px solid rgba(16, 185, 129, 0.25);
     box-shadow: 0px 0px 10px rgba(155, 184, 168, 0.5);
+    transition: all 0.3s ease-in-out;
+    &:hover {
+    scale: 1 1.1;
+    cursor: pointer;
+    }
 `
 const animationLine = keyframes`
     0% {transform:translateX(0px);}
@@ -138,6 +143,13 @@ const Paragraph = styled.p`
     border-radius:5px;
     text-transform:capitalize;
     font-family:Segoe UI;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid rgba(16, 185, 129, 0.25);
+    box-shadow: 0px 0px 10px rgba(155, 184, 168, 0.5);
+    &:hover {
+    scale:1 1.1;
+    cursor: pointer;
+    }
 `
 const FrontendParagraph = styled(Paragraph)``
 const BackendParagraph = styled(Paragraph)``;
