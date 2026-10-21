@@ -76,7 +76,7 @@ const Skillcontainer = styled.div`
     align-items:center;
     border:solid 3px #ffffff;
     padding: 20px;
-    gap:20px;
+    gap:40px;
     box-sizing:border-box;
 `
 const Box = styled.div`
@@ -89,7 +89,16 @@ const Box = styled.div`
     padding: 20px;
 `
 const Frontend = styled(Box)`
-
+position:relative;
+    ::after{
+    content:'';
+    position:absolute;
+    width:2px;
+    height:100%;
+    background-color:#ffffff;
+    left:-22px;
+    top:0%
+    }
 `;
 const Backend = styled(Box)`
 
@@ -101,12 +110,12 @@ function Skills(){
                     <h1 style={h1Style}>skills</h1>
                 </div>
                 <Skillcontainer>
-                    <Frontend>
-                                {frontendSkills.map(skill=><FrontendSkills skill={skill} key={skill}/>)}
-                    </Frontend>
                     <Backend>
                                 {backendSkills.map(skill=><BackendSkills skill={skill} key={skill}/>)}
                     </Backend>
+                    <Frontend>
+                                {frontendSkills.map(skill=><FrontendSkills skill={skill} key={skill}/>)}
+                    </Frontend>
                 </Skillcontainer>
     </SkillSection>
 }
