@@ -6,6 +6,7 @@ const Section = styled.section`
     background: radial-gradient(ellipse at 50% 0%, rgba(16, 185, 129, 0.18), transparent 55%), linear-gradient(180deg, rgb(7 19 14) 0%, rgb(10 28 20) 100%);
     color: #a7c4b5;
     padding: 3rem 2rem;
+    min-height: 100vh;
 `;
 
 const StyleIcon = styled(FontAwesomeIcon)`
@@ -138,31 +139,33 @@ const Paragraph = styled.p`
 const year = '2026';
 function Contact() {
     return (
-        <Section>
-            <div style={headingStyle}>
-                <StyleIcon icon={faEnvelope} />
-                <h1 style={h1Style}>contact me</h1>
+        <Section id="contact">
+            <div style={{ marginTop: '260px' }}>
+                <div style={headingStyle}>
+                    <StyleIcon icon={faEnvelope} />
+                    <h1 style={h1Style}>contact me</h1>
+                </div>
+                <Links>
+                    <Anchor href="tel:+01212275860" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faPhone} />
+                    </Anchor>
+                    <Anchor href="https://wa.me/01212275860" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faWhatsapp} />
+                    </Anchor>
+                    <Anchor href="mailto:anwartarek719@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faEnvelope} />
+                    </Anchor>
+                    <Anchor href="https://github.com/anwartarekA" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faGithub} />
+                    </Anchor>
+                    <Anchor href="https://linkedin.com/anwartarekA" target="_blank" rel="noopener noreferrer">
+                        <FontAwesomeIcon icon={faLinkedin} />
+                    </Anchor>
+                </Links>
+                <Paragraph>
+                    &copy; {year} <Name>Anwar Tarek</Name>. All rights reserved.
+                </Paragraph>
             </div>
-            <Links>
-                <Anchor href="tel:+01212275860" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faPhone} />
-                </Anchor>
-                <Anchor href="https://wa.me/01212275860" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faWhatsapp} />
-                </Anchor>
-                <Anchor href="mailto:anwartarek719@gmail.com" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faEnvelope} />
-                </Anchor>
-                <Anchor href="https://github.com/anwartarekA" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faGithub} />
-                </Anchor>
-                <Anchor href="https://linkedin.com/anwartarekA" target="_blank" rel="noopener noreferrer">
-                    <FontAwesomeIcon icon={faLinkedin} />
-                </Anchor>
-            </Links>
-            <Paragraph>
-                &copy; {year} <Name>Anwar Tarek</Name>. All rights reserved.
-            </Paragraph>
         </Section>
     );
 }

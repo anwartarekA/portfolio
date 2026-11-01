@@ -1,11 +1,12 @@
-import styled , { keyframes } from "styled-components";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDiagramProject ,faChevronLeft , faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import styled, { keyframes } from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiagramProject, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 const projects = [
     {
-        title:'ERP-system',
-        description:'Developed a comprehensive ERP backend system to manage products, stock,inventory, users, sales representatives, purchase orders, sales orders, and stocktransfers within a centralized platform. The system ensures accurate stock tracking,streamlined purchasing and sales workflows, controlled inventory movement, andclear role-based access for users and representatives. It helps businesses reduceoperational errors, improve data consistency, and gain better visibility over dailyoperations and decision-making. Built using Node.js, Express.js, MongoDB, withJWT-based authentication, role-based authorization, and a scalable, maintainablebackend architecture.',
-        link:'https://github.com/anwartarekA/ERP'
+        title: 'ERP-system',
+        description:
+            'Developed a comprehensive ERP backend system to manage products, stock,inventory, users, sales representatives, purchase orders, sales orders, and stocktransfers within a centralized platform. The system ensures accurate stock tracking,streamlined purchasing and sales workflows, controlled inventory movement, andclear role-based access for users and representatives. It helps businesses reduceoperational errors, improve data consistency, and gain better visibility over dailyoperations and decision-making. Built using Node.js, Express.js, MongoDB, withJWT-based authentication, role-based authorization, and a scalable, maintainablebackend architecture.',
+        link: 'https://github.com/anwartarekA/ERP',
     },
     // {
     //     title:'E-commerce',
@@ -72,169 +73,175 @@ const projects = [
     //     description:' software tools: HTML, CSS, Javascript This application for my team memories so i made this application to store my and their memories and also this application filter the members based on thier fields. ',
     //     link:"https://github.com/anwartarekA/galleryTeam"
     // }
-]
+];
 const headingStyle = {
-    'display':'flex',
-    'justifyContent':'space-between',
-    'width':'200px',
-    'height':'70px',
-    'textTransform': 'capitaliz',
-    'fontFamily': 'arial',
-    'transform':'translate(850px, 30px)',
-    'borderBottom':'solid 5px rgb(136 175 157)',
-    'padding':'10px 0'
-}
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '200px',
+    height: '70px',
+    textTransform: 'capitaliz',
+    fontFamily: 'arial',
+    transform: 'translate(850px, 30px)',
+    borderBottom: 'solid 5px rgb(136 175 157)',
+    padding: '10px 0',
+};
 const h1Style = {
-    'color':'white',
-    'fontSize':'40px',
-    'textTransform':'capitalize'
-}
+    color: 'white',
+    fontSize: '40px',
+    textTransform: 'capitalize',
+};
 const StyleIcon = styled(FontAwesomeIcon)`
-    color:#34d399;
-    font-size:40px;
-    margin-top:25px;
-    margin-left:-9px
-`
+    color: #34d399;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-left: -9px;
+`;
 const ProjectsSection = styled.section`
-    padding:20px 0;
-    background:
-    radial-gradient(ellipse at 50% 0%, rgba(16, 185, 129, 0.18), transparent 55%),
-    linear-gradient(180deg, #0b2a1f 0%, #06140f 100%);
-`
+    padding: 20px 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 50% 0%, rgba(16, 185, 129, 0.18), transparent 55%), linear-gradient(180deg, #0b2a1f 0%, #06140f 100%);
+`;
 const animateRight = keyframes`
     0% , 100% {transform:translateX(0)}
     50% {transform:translateX(-5px)}
-`
+`;
 const ArrowRightBtn = styled(FontAwesomeIcon)`
-    position:absolute;
-    right:15px;
-    width:35px;
-    height:35px;
-    color:rgb(155, 184, 168);
-    cursor:pointer;
-    animation-name:${animateRight};
-    animation-duration:3s;
-    animation-iteration-count:infinite;
-    animation-timing-function:ease-in-out;
-    transition:0.3s all;
-    &:hover{
-        scale:1.3;
-        cursor:pointer
+    position: absolute;
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    color: rgb(155, 184, 168);
+    cursor: pointer;
+    animation-name: ${animateRight};
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: 0.3s all;
+    &:hover {
+        scale: 1.3;
+        cursor: pointer;
     }
-`
+`;
 const animateLeft = keyframes`
     0% , 100% {transform:translateX(0)}
     50% {transform:translateX(-5px)}
-`
+`;
 const ArrowLeftBtn = styled(FontAwesomeIcon)`
-    position:absolute;
-    left:15x;
-    width:35px;
-    height:35px;
-    color:rgb(155, 184, 168);
-    cursor:pointer;
-    animation-name:${animateLeft};
-    animation-duration:3s;
-    animation-iteration-count:infinite;
-    animation-timing-function:ease-in-out;
-    transition:0.3s all;
-    &:hover{
-        scale:1.3;
-        cursor:pointer
+    position: absolute;
+    left: 15x;
+    width: 35px;
+    height: 35px;
+    color: rgb(155, 184, 168);
+    cursor: pointer;
+    animation-name: ${animateLeft};
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: 0.3s all;
+    &:hover {
+        scale: 1.3;
+        cursor: pointer;
     }
-`
+`;
 const animatedLi = keyframes`
 0% , 100% {transform:translateX(0)}
 50% {transform:translateX(-10px)}
-`
+`;
 const Li = styled.li`
-    width:500px;
-    border-radius:15px;
-    list-style-type:none;
-    padding : 30px 15px;
+    width: 500px;
+    border-radius: 15px;
+    list-style-type: none;
+    padding: 30px 15px;
     background: rgba(10, 40, 30, 0.6);
     border: 1px solid rgba(16, 185, 129, 0.25);
-    margin:60px auto 0px;
-    box-shadow:rgb(155, 184, 168) 0px 0px 10px;
-    animation-name:${animatedLi};
-    animation-duration:3s;
-    animation-iteration-count:infinite;
-    animation-timing-function:ease-in-out;
-    transition:0.3s all;
-    &:hover{
-        scale:1.1 1;
-        cursor:pointer
+    margin: 60px auto 0px;
+    box-shadow: rgb(155, 184, 168) 0px 0px 10px;
+    animation-name: ${animatedLi};
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    transition: 0.3s all;
+    &:hover {
+        scale: 1.1 1;
+        cursor: pointer;
     }
-`
+`;
 const titleStyle = {
-    'fontSize':'25px',
-    'color':'rgb(155, 184, 168)',
-    'textAlign':'center',
-    'display':'block',
-    'fontFamily':'Segoe UI',
-    'textTransform':'uppercase'
-}
+    fontSize: '25px',
+    color: 'rgb(155, 184, 168)',
+    textAlign: 'center',
+    display: 'block',
+    fontFamily: 'Segoe UI',
+    textTransform: 'uppercase',
+};
 const descriptionStyle = {
-    'fontSize':'16px',
-    'lineHeight':'1.9',
-    'color':'rgb(155, 184, 168)',
-    'display':'block',
-    'fontFamily':'Segoe UI',
-    'marginTop':'30px',
-    'opacity':'0.5',
-    'textAlign':'center'
-}
-const Anchor =styled.a`
-    display:block;
-    text-decoration:none;
-    font-size:25px;
-    color:#ffffff;
-    text-align:center;
-    margin-top:20px;
-`
+    fontSize: '16px',
+    lineHeight: '1.9',
+    color: 'rgb(155, 184, 168)',
+    display: 'block',
+    fontFamily: 'Segoe UI',
+    marginTop: '30px',
+    opacity: '0.5',
+    textAlign: 'center',
+};
+const Anchor = styled.a`
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+`;
 const Span = styled.span`
-    border:1px solid rgb(232, 245, 238);
-    border-radius:10px;
-    padding:5px 20px;
-    transition:0.3s all;
-&:hover {
+    border: 1px solid rgb(232, 245, 238);
+    border-radius: 10px;
+    padding: 5px 20px;
+    transition: 0.3s all;
+    &:hover {
         color: rgb(110, 231, 183);
         background-color: rgba(16, 185, 129, 0.15);
     }
-`
+`;
 const iconsStyles = {
-    'position':'absolute',
-    'top':'calc(50% - 15px)',
-    'left':'calc(50% - 305px)',
-    'width':'650px',
-    'backgroundColor':'green',
-}
+    position: 'absolute',
+    top: 'calc(50% - 15px)',
+    left: 'calc(50% - 305px)',
+    width: '650px',
+    backgroundColor: 'green',
+};
 
-function Projects ()
-{
-    return <ProjectsSection>
-        <div style={headingStyle}>  
-            <StyleIcon icon={faDiagramProject}/>
-            <h1 style={h1Style}>projects</h1>
-        </div>
-        <div style={{position:'relative'}}>
-            <ul>
-                {projects.map(project=> <Project project={project} key={project.title}/>)}
-            </ul>
-            <div style={iconsStyles}>
-                <ArrowLeftBtn icon={faChevronLeft} />
-                <ArrowRightBtn icon={faChevronRight} />
+function Projects() {
+    return (
+        <ProjectsSection id="projects">
+            <div style={{ marginTop: '100px' }}>
+                <div style={headingStyle}>
+                    <StyleIcon icon={faDiagramProject} />
+                    <h1 style={h1Style}>projects</h1>
+                </div>
+                <div style={{ position: 'relative' }}>
+                    <ul>
+                        {projects.map((project) => (
+                            <Project project={project} key={project.title} />
+                        ))}
+                    </ul>
+                    <div style={iconsStyles}>
+                        <ArrowLeftBtn icon={faChevronLeft} />
+                        <ArrowRightBtn icon={faChevronRight} />
+                    </div>
+                </div>
             </div>
-        </div>
-    </ProjectsSection>
+        </ProjectsSection>
+    );
 }
-function Project ({project}){
-    return <Li>
-        <span style={titleStyle}>{project.title}</span>
-        <span style={descriptionStyle}>{project.description}</span>
-        <Anchor href={project.link} target="_blank">
-            <Span>visit</Span>
-        </Anchor>
-    </Li>
+function Project({ project }) {
+    return (
+        <Li>
+            <span style={titleStyle}>{project.title}</span>
+            <span style={descriptionStyle}>{project.description}</span>
+            <Anchor href={project.link} target="_blank">
+                <Span>visit</Span>
+            </Anchor>
+        </Li>
+    );
 }
 export default Projects;

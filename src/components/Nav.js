@@ -25,13 +25,19 @@ const Logo = styled.div`
     padding: 10px;
     font-weight: bold;
     font-family: Segoe UI;
+    text-decoration: none;
+    font-size: 20px;
 `;
-
-const NavItem = styled.div`
+const Anchor = styled.a`
+    text-decoration: none;
+    color: inherit;
+`;
+const NavItem = styled.a`
     cursor: pointer;
     padding: 7px 14px;
     color: #e8f5ee;
     border-radius: 999px;
+    text-decoration: none;
     transition:
         color 0.3s,
         background-color 0.3s;
@@ -64,20 +70,38 @@ const ThemeIcon = styled(FontAwesomeIcon)`
 function Nav() {
     const [active, setActive] = useState('');
     function handleClick(e) {
-        if (e.target.tagName === 'DIV') setActive(e.target.textContent);
+        if (e.target.tagName === 'A') {
+            setActive(e.target.textContent);
+        }
     }
     return (
         <>
             <div style={divStyling}>
-                <Logo>Anwar Tarek</Logo>
+                <Logo>
+                    <Anchor href="#home">Anwar Tarek</Anchor>
+                </Logo>
                 <Navbar onClick={handleClick}>
-                    <NavItem className={active === 'Home' ? 'active' : ''}>Home</NavItem>
-                    <NavItem className={active === 'About' ? 'active' : ''}>About</NavItem>
-                    <NavItem className={active === 'Projects' ? 'active' : ''}>Projects</NavItem>
-                    <NavItem className={active === 'Skills' ? 'active' : ''}>Skills</NavItem>
-                    <NavItem className={active === 'CV/Resume' ? 'active' : ''}>CV/Resume</NavItem>
-                    <NavItem className={active === 'Experiences' ? 'active' : ''}>Experiences</NavItem>
-                    <NavItem className={active === 'Contact' ? 'active' : ''}>Contact</NavItem>
+                    <NavItem className={active === 'Home' ? 'active' : ''} href="#home">
+                        Home
+                    </NavItem>
+                    <NavItem className={active === 'About' ? 'active' : ''} href="#about">
+                        About
+                    </NavItem>
+                    <NavItem className={active === 'Projects' ? 'active' : ''} href="#projects">
+                        Projects
+                    </NavItem>
+                    <NavItem className={active === 'Skills' ? 'active' : ''} href="#skills">
+                        Skills
+                    </NavItem>
+                    <NavItem className={active === 'CV/Resume' ? 'active' : ''} href="#home">
+                        CV/Resume
+                    </NavItem>
+                    <NavItem className={active === 'Experiences' ? 'active' : ''} href="#experiences">
+                        Experiences
+                    </NavItem>
+                    <NavItem className={active === 'Contact' ? 'active' : ''} href="#contact">
+                        Contact
+                    </NavItem>
                 </Navbar>
                 <ThemeIcon icon={faMoon} />
             </div>

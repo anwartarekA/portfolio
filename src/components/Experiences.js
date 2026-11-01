@@ -37,6 +37,7 @@ const ExperiencesSection = styled.section`
     background: radial-gradient(circle at 12% 8%, rgba(16, 185, 129, 0.12), transparent 40%), radial-gradient(circle at 88% 92%, rgba(52, 211, 153, 0.08), transparent 45%), rgb(7 19 14);
     color: #a7c4b5;
     padding: 6rem 1.5rem;
+    min-height: 100vh;
 `;
 const StyleIcon = styled(FontAwesomeIcon)`
     color: #34d399;
@@ -157,20 +158,22 @@ const iconsStyles = {
 
 function Experiences() {
     return (
-        <ExperiencesSection>
-            <div style={headingStyle}>
-                <StyleIcon icon={faBriefcase} />
-                <h1 style={h1Style}>experiences</h1>
-            </div>
-            <div style={{ position: 'relative' }}>
-                <ul>
-                    {experiences.map((experience) => (
-                        <ExperienceCard key={experience.jobTitle} jobTitle={experience.jobTitle} company={experience.company} description={experience.description} />
-                    ))}
-                </ul>
-                <div style={iconsStyles}>
-                    <ArrowLeftBtn icon={faChevronLeft} />
-                    <ArrowRightBtn icon={faChevronRight} />
+        <ExperiencesSection id="experiences">
+            <div style={{ marginTop: '100px' }}>
+                <div style={headingStyle}>
+                    <StyleIcon icon={faBriefcase} />
+                    <h1 style={h1Style}>experiences</h1>
+                </div>
+                <div style={{ position: 'relative' }}>
+                    <ul>
+                        {experiences.map((experience) => (
+                            <ExperienceCard key={experience.jobTitle} jobTitle={experience.jobTitle} company={experience.company} description={experience.description} />
+                        ))}
+                    </ul>
+                    <div style={iconsStyles}>
+                        <ArrowLeftBtn icon={faChevronLeft} />
+                        <ArrowRightBtn icon={faChevronRight} />
+                    </div>
                 </div>
             </div>
         </ExperiencesSection>
