@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
-import './../css/Nav.css';
+import './../css/nav.css';
 import { useState } from 'react';
 const Navbar = styled.nav`
     width: 55%;

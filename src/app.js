@@ -3,11 +3,10 @@ import Nav from "./components/Nav"
 import Home from "./components/Home"
 import About from "./components/About"
 import Projects from "./components/Projects"
-
+import Skills from "./components/Skills"
 import Scroll from "./components/Scroll.js"
-import Skills from "./components/Skills.js"
-import Skills from "./components/Skills";
 import Experiences from "./components/Experiences";
+import Contact from "./components/Contact";
 function App (){
     return <>
         <ParticlesBg/>
@@ -15,10 +14,10 @@ function App (){
         <Home/>
         <About/>
         <Projects/>
+        <Skills/>
         <Scroll/>
-        <Skills/>
-        <Skills/>
         <Experiences/>
+        <Contact/>
     </>
 }
 export default App 

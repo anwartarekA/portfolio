@@ -40,7 +40,6 @@ const headingStyle = {
     height: '70px',
     textTransform: 'capitaliz',
     fontFamily: 'arial',
-    transform: 'translate(850px, 30px)',
     borderBottom: 'solid 5px rgb(136 175 157)',
     padding: '10px 0',
     transform: 'translate(850px, 100px)',
