@@ -15,7 +15,7 @@ function App (){
         <About/>
         <Projects/>
         <Skills/>
-        <Scroll/>
+        <Scroll href="#home"/>
         <Experiences/>
         <Contact/>
     </>

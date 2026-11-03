@@ -25,10 +25,15 @@ const ScrollComponent = styled(FontAwesomeIcon)`
     }
 `
 function Scroll (){
+    function scrollToTop(e){
+        e.preventDefault();
+        const targetElement = document.querySelector('#home');
+        targetElement.scrollIntoView({behavior:'smooth', block:'start'});
+    }
     return <div>
-        <div>
+        <a onClick={scrollToTop} href="#home">
             <ScrollComponent icon={faArrowAltCircleUp}/>
-        </div>
+        </a>
     </div>
 }
 export default Scroll;
