@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 import './../css/nav.css';
-import { useState } from 'react';
+import { useState , useEffect } from 'react';
 const Navbar = styled.nav`
     width: 55%;
     display: flex;
@@ -70,24 +70,37 @@ const ThemeIcon = styled(FontAwesomeIcon)`
 function Nav() {
     const [active, setActive] = useState('');
     function handleClick(e) {
+        e.preventDefault();
         if (e.target.tagName === 'A') {
-            e.preventDefault();
+            const homeElement = document.querySelector('.nav-container nav a');
+            homeElement.classList.remove('active')
             setActive(e.target.textContent);
             const href = e.target.href;
             const targetId = href.split('#')[1];
             const targetElement = document.getElementById(targetId);
-            console.log(targetElement);
             targetElement.scrollIntoView({ behavior: 'smooth' });
         }
     }
+    function handleLogoClick(e){
+            e.preventDefault();
+            const href = e.target.href;
+            const targetId = href.split('#')[1];
+            const targetElement = document.getElementById(targetId)
+            targetElement.scrollIntoView({behavior:'smooth'})
+    }
+    useEffect(function(){
+        if(document.querySelector('.nav-container nav a')){
+            document.querySelector('.nav-container nav a').classList.add('active')
+        };
+    },[])
     return (
         <>
-            <div style={divStyling}>
+            <div style={divStyling} className="nav-container">
                 <Logo>
-                    <Anchor href="#home">Anwar Tarek</Anchor>
+                    <Anchor href="#home" onClick={handleLogoClick}>Anwar Tarek</Anchor>
                 </Logo>
                 <Navbar onClick={handleClick}>
-                    <NavItem className={active === 'Home' ? 'active' : ''} href="#home">
+                    <NavItem className={active === 'Home' ? 'active' : ''}  href="#home">
                         Home
                     </NavItem>
                     <NavItem className={active === 'About' ? 'active' : ''} href="#about">
