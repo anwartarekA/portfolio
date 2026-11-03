@@ -71,7 +71,13 @@ function Nav() {
     const [active, setActive] = useState('');
     function handleClick(e) {
         if (e.target.tagName === 'A') {
+            e.preventDefault();
             setActive(e.target.textContent);
+            const href = e.target.href;
+            const targetId = href.split('#')[1];
+            const targetElement = document.getElementById(targetId);
+            console.log(targetElement);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
         }
     }
     return (

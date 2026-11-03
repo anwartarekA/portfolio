@@ -117,9 +117,9 @@ const Span = styled.span`
         background-color: rgba(56, 59, 58, 0.15);
     }
 `;
-function About() {
+function About({ref}) {
     return (
-        <div style={aboutStyle} id="about">
+        <div style={aboutStyle} id="about" ref={ref}>
             <div style={headingStyle}>
                 <StyleIcon icon={faUser} />
                 <h1 style={h1Style}>about me</h1>
