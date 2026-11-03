@@ -1,77 +1,111 @@
-import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/free-solid-svg-icons';
+import './../css/Nav.css';
+import { useState } from 'react';
 const Navbar = styled.nav`
-  width: 55%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color: #e8f5ee;
-  background-color: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(8px);
-  border-radius: 999px;
-  padding: 10px;
+    width: 55%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #e8f5ee;
+    background-color: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(8px);
+    border-radius: 999px;
+    padding: 10px;
 `;
 
 const Logo = styled.div`
-  width: 15%;
-  background:linear-gradient(to right ,#10b981, #6ee7b7);
-  background-clip:text;
-  color:transparent;
-  border-radius: 12px;
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  font-family:Segoe UI
+    width: 15%;
+    background: linear-gradient(to right, #10b981, #6ee7b7);
+    background-clip: text;
+    color: transparent;
+    border-radius: 12px;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-family: Segoe UI;
+    text-decoration: none;
+    font-size: 20px;
 `;
+const Anchor = styled.a`
+    text-decoration: none;
+    color: inherit;
+`;
+const NavItem = styled.a`
+    cursor: pointer;
+    padding: 7px 14px;
+    color: #e8f5ee;
+    border-radius: 999px;
+    text-decoration: none;
+    transition:
+        color 0.3s,
+        background-color 0.3s;
+    font-family: Segoe UI;
 
-const NavItem = styled.div`
-  cursor: pointer;
-  padding: 7px 14px;
-  color: #e8f5ee;
-  border-radius: 999px;
-  transition: color 0.3s, background-color 0.3s;
-  font-family:Segoe UI;
-
-  &:hover {
-    color: #6ee7b7;
-    background-color: rgba(16, 185, 129, 0.15);
-  }
+    &:hover {
+        color: #6ee7b7;
+        background-color: rgba(16, 185, 129, 0.15);
+    }
 `;
 const divStyling = {
-    'width':'100%',
-    'position':'fixed',
-    'top':'0',
-    'display':'flex',
-    'alignItems':'center',
-    'justifyContent':'space-evenly',
-    'fontSize':'18px',
-    'zIndex':'100'
-}
+    width: '100%',
+    position: 'fixed',
+    top: '0',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    fontSize: '18px',
+    zIndex: '100',
+};
 
 const ThemeIcon = styled(FontAwesomeIcon)`
-    width:10%;
-    color:#ffd43b;
-    font-size:25px;
-    cursor:pointer;
-    text-align:center;
-    padding:17px;
-`
-function Nav(){
-    return <>
-    <div style={divStyling }>
-        <Logo>Anwar Tarek</Logo>
-    <Navbar>
-        <NavItem>Home</NavItem>
-        <NavItem>About</NavItem>
-        <NavItem>Projects</NavItem>
-        <NavItem>Skills</NavItem>
-        <NavItem>CV/Resume</NavItem>
-        <NavItem>Experiences</NavItem>
-        <NavItem>Contact</NavItem>
-    </Navbar>
-        <ThemeIcon icon={faMoon}/>
-    </div>
-    </>
+    width: 10%;
+    color: #ffd43b;
+    font-size: 25px;
+    cursor: pointer;
+    text-align: center;
+    padding: 17px;
+`;
+function Nav() {
+    const [active, setActive] = useState('');
+    function handleClick(e) {
+        if (e.target.tagName === 'A') {
+            setActive(e.target.textContent);
+        }
+    }
+    return (
+        <>
+            <div style={divStyling}>
+                <Logo>
+                    <Anchor href="#home">Anwar Tarek</Anchor>
+                </Logo>
+                <Navbar onClick={handleClick}>
+                    <NavItem className={active === 'Home' ? 'active' : ''} href="#home">
+                        Home
+                    </NavItem>
+                    <NavItem className={active === 'About' ? 'active' : ''} href="#about">
+                        About
+                    </NavItem>
+                    <NavItem className={active === 'Projects' ? 'active' : ''} href="#projects">
+                        Projects
+                    </NavItem>
+                    <NavItem className={active === 'Skills' ? 'active' : ''} href="#skills">
+                        Skills
+                    </NavItem>
+                    <NavItem className={active === 'CV/Resume' ? 'active' : ''} href="#home">
+                        CV/Resume
+                    </NavItem>
+                    <NavItem className={active === 'Experiences' ? 'active' : ''} href="#experiences">
+                        Experiences
+                    </NavItem>
+                    <NavItem className={active === 'Contact' ? 'active' : ''} href="#contact">
+                        Contact
+                    </NavItem>
+                </Navbar>
+                <ThemeIcon icon={faMoon} />
+            </div>
+        </>
+    );
 }
-export default Nav
+export default Nav;
